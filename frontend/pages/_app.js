@@ -8,8 +8,9 @@ class MyApp extends App {
         if(Component.getInitialprops){
             pageProps = await Component.getInitialProps(ctx);
         }
+        // ehis expose query to users
         pageProps.query = ctx.query;
-        return {pageProps};
+        return { pageProps };
     }
     render(){
         const {Component, apollo, pageProps} = this.props;
@@ -17,7 +18,7 @@ class MyApp extends App {
             <Container>                
                 <ApolloProvider client={apollo}>
                     <Page>
-                        <Component/>
+                        <Component {...pageProps}/>
                     </Page>
                 </ApolloProvider>
             </Container>
