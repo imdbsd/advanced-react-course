@@ -30,7 +30,7 @@ class DeleteItem extends Component {
                     return(
                         <button onClick={() => {
                             if(confirm('Are you sure to delete this item?')){
-                                deleteItem()
+                                deleteItem()    
                             }
                         }}>{this.props.children}</button>
                     )                    

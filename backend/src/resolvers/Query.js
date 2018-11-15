@@ -21,8 +21,7 @@ const Query = {
         }
         hasPermission(ctx.request.user, ['ADMIN', 'PERMISSIONUDATE']);
 
-        return ctx.db.users({}, info);
-
+        return ctx.db.query.users({}, info);
     }
     // async items(parent, args, ctx, info){
     //     const items = await ctx.db.query.items();
